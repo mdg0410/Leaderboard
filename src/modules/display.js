@@ -11,8 +11,9 @@ class Display {
   constructor() {
     this.container = document.getElementById('listScore');
     if (localStorage.getItem(this.localData)) {
-      // eslint-disable-next-line max-len
-      this.scores = JSON.parse(localStorage.getItem(this.localData)).map((score) => new Score(score.name, score.score, score.index));
+      this.scores = JSON.parse(localStorage.getItem(this.localData)).map(
+        (score) => new Score(score.name, score.score, score.index),
+      );
     } else {
       this.scores = addScores.map((score) => new Score(score.name, score.score, score.index));
     }
