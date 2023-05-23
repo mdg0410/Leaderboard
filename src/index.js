@@ -1,6 +1,4 @@
 import './styles.css';
+import display from './modules/display.js';
 
-const test = document.getElementById('test');
-const text = document.createElement('p');
-text.textContent = 'Pass';
-test.appendChild(text);
+display.render();
