@@ -1,26 +1,29 @@
-body,h1,h2,p{
+body,
+h1,
+h2,
+p {
   padding: 0;
   margin: 0;
 }
 
-header{
+header {
   padding: 6vh 4vh;
 }
 
-h1{
+h1 {
   font-size: 50px;
 }
 
-#container{
+#container {
   display: flex;
   padding: 2vh 8vh;
-  gap: 10vh
+  gap: 10vh;
 }
 
-#containerScores{
+#containerScores {
   display: flex;
   flex-direction: column;
-  gap: 3vh
+  gap: 3vh;
 }
 
 #titleScores {
@@ -28,12 +31,12 @@ h1{
   gap: 3vh;
 }
 
-#titleScores p{
+#titleScores p {
   font-size: 25px;
   font-weight: 700;
 }
 
-#listScore{
+#listScore {
   display: flex;
   flex-direction: column;
   width: 99%;
@@ -41,17 +44,17 @@ h1{
   padding: 0;
 }
 
-#containerForm{
+#containerForm {
   display: flex;
   flex-direction: column;
 }
 
-#addScore{
+#addScore {
   display: flex;
   flex-direction: column;
 }
 
-li{
+li {
   list-style: none;
   padding: 1vh;
 }
