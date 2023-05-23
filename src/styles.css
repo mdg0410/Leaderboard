@@ -36,22 +36,40 @@ h1 {
   font-weight: 700;
 }
 
+button {
+  box-shadow: 2px 2px black;
+  border: 2px solid black;
+  padding: 0.3em 0.6em;
+}
+
 #listScore {
   display: flex;
   flex-direction: column;
   width: 99%;
-  border: solid 1px green;
+  border: 2px solid black;
   padding: 0;
 }
 
 #containerForm {
   display: flex;
   flex-direction: column;
+  gap: 3vh;
 }
 
 #addScore {
   display: flex;
   flex-direction: column;
+  gap: 2vh;
+}
+
+#addScore input {
+  padding: 1vh;
+  border: 2px solid black;
+}
+
+#submit {
+  width: 40%;
+  margin-left: auto;
 }
 
 li {
