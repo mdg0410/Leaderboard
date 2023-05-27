@@ -1,6 +1,11 @@
 import './styles.css';
 import { createNewGame, fetchScores, addScore } from './modules/game.js';
 
+const refreshBtn = document.getElementById('refresh');
+refreshBtn.addEventListener('click', async () => {
+  await fetchScores();
+});
+
 const init = async () => {
   const form = document.forms['add-Score'];
   form.addEventListener('submit', async (e) => {

@@ -8,6 +8,7 @@ const createScoreNode = (score) => {
 
 const render = (scores) => {
   const scoresContainer = document.getElementById('listScore');
+  scoresContainer.innerHTML = '';
   scores.forEach((score) => {
     scoresContainer.append(createScoreNode(score));
   });
