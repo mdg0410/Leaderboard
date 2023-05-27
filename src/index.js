@@ -1,4 +1,19 @@
 import './styles.css';
-import display from './modules/display.js';
+import { createNewGame, fetchScores, addScore } from './modules/game.js';
 
-display.render();
+const init = async () => {
+  const form = document.forms['add-Score'];
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    await addScore({
+      user: e.target.elements.name.value,
+      score: e.target.elements.score.value,
+    });
+    form.reset();
+    e.target.elements.name.focus();
+  });
+  await createNewGame();
+  await fetchScores();
+};
+
+init();
