@@ -6,7 +6,7 @@ p {
   margin: 0;
 }
 
-body{
+body {
   background-color: black;
   color: aliceblue;
 }
@@ -76,7 +76,7 @@ button {
   border: 2px solid black;
 }
 
-input:focus{
+#addScore input:focus {
   background-color: rgb(210, 203, 222);
 }
 
