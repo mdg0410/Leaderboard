@@ -1,7 +1,3 @@
-let keyId = '';
+const keyId = 'Qt01rUU3S0QYI0Cks3nJ';
 
-const getKey = () => keyId.toString();
-
-const setKey = (id) => { keyId = id; };
-
-export { setKey, getKey };
+export default keyId;

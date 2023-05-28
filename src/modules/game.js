@@ -1,5 +1,4 @@
-import { setKey, getKey } from './keys.js';
-import { setScore, getScore } from './scores.js';
+import Id from './keys.js';
 import render from './display.js';
 
 const createNewGame = async () => {
@@ -11,21 +10,19 @@ const createNewGame = async () => {
     body: JSON.stringify({ name: 'MicroGameXtrem' }),
   });
   return game.json().then((res) => {
-    const key = toString(/\w{20}/.exec(res.result)[0]);
-    setKey(key);
+    toString(/\w{20}/.exec(res.result)[0]);
   });
 };
 
 const fetchScores = async () => {
-  const res = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${getKey()}/scores/`);
+  const res = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${Id}/scores/`);
   return res.json().then(({ result }) => {
-    setScore(result);
-    render(getScore());
+    render(result);
   });
 };
 
 const addScore = async (newScore) => {
-  await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${getKey()}/scores`, {
+  await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${Id}/scores`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json;charset=utf-8',
@@ -34,4 +31,4 @@ const addScore = async (newScore) => {
   });
 };
 
-export { createNewGame, fetchScores, addScore };
+export { fetchScores, addScore, createNewGame };

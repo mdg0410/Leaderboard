@@ -1,5 +1,6 @@
 import './styles.css';
-import { createNewGame, fetchScores, addScore } from './modules/game.js';
+import { fetchScores, addScore, createNewGame } from './modules/game.js';
+import keyId from './modules/keys.js';
 
 const refreshBtn = document.getElementById('refresh');
 refreshBtn.addEventListener('click', async () => {
@@ -17,7 +18,9 @@ const init = async () => {
     form.reset();
     e.target.elements.name.focus();
   });
-  await createNewGame();
+  if (keyId === '') {
+    createNewGame();
+  }
   await fetchScores();
 };
 
